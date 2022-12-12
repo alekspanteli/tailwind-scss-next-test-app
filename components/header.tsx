@@ -16,6 +16,11 @@ export default function Header() {
               About
             </Link>
           </li>
+          <li className="primary-navigation__item">
+            <Link href="/about" className="primary-navigation__link">
+              Nesting
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

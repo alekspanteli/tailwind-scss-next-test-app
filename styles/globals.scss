@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 // Nesting
 
-.primary-navigation{
-    @apply p-4;
-    ul{
-        @apply flex gap-4 list-none m-0 p-0
-    }
+.primary-navigation {
+  @apply p-4;
+  ul {
+    @apply flex gap-4 list-none m-0 p-0;
+  }
+  a {
+    @apply uppercase no-underline;
+  }
 }
