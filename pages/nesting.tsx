@@ -34,6 +34,7 @@ export default function Home() {
         <button className="btn btn__secondary">Click here</button>
         <button className="btn btn__accent">Click here</button>
       </div>
+      <h2>Trailing selector</h2>
       <footer className="test-footer px-4">
         <p className="my-text">text goes here</p>
       </footer>
