@@ -13,3 +13,13 @@
     @apply uppercase no-underline;
   }
 }
+
+.card{
+  @apply p-4 bg-[#efefef] shadow-[0_0_1rem_rgba(0,0,0,0.15)];
+  &-title{
+    @apply text-[1.5rem] uppercase
+  }
+  .body{
+    @apply text-[1.125rem]
+  }
+}

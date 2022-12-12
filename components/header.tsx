@@ -17,7 +17,7 @@ export default function Header() {
             </Link>
           </li>
           <li className="primary-navigation__item">
-            <Link href="/about" className="primary-navigation__link">
+            <Link href="/nesting" className="primary-navigation__link">
               Nesting
             </Link>
           </li>
