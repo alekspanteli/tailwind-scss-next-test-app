@@ -11,6 +11,7 @@ export default function Home() {
       <article className="card">
         <h2 className="card-title">Title</h2>
         <p className="body">Text goes here</p>
+        <a href="" className="card-link">Link</a>
       </article>
     </>
   );
