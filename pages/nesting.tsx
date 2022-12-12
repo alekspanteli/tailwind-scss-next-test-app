@@ -11,7 +11,9 @@ export default function Home() {
       <article className="card">
         <h2 className="card-title">Title</h2>
         <p className="body">Text goes here</p>
-        <a href="" className="card-link">Link</a>
+        <a href="" className="card-link">
+          Link
+        </a>
       </article>
       <article className="primary-article">
         <h2 className="title">
@@ -23,7 +25,19 @@ export default function Home() {
           <li>List item</li>
         </ul>
       </article>
-      <a href="" className="mylink">Test parahraph</a>
+      <a href="" className="mylink">
+        Test parahraph
+      </a>
+      <h2>Nesting challenge 1</h2>
+      <div className="inline-flex gap-x-2">
+        <button className="btn btn__primary">Click here</button>
+        <button className="btn btn__secondary">Click here</button>
+        <button className="btn btn__accent">Click here</button>
+      </div>
+      <footer className="test-footer px-4">
+        <p className="my-text">text goes here</p>
+      </footer>
+      <p className="my-text">text goes here</p>
     </>
   );
 }

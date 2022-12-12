@@ -66,3 +66,37 @@
     decoration: none;
   }
 }
+
+
+//Nesting challenge 1
+
+.btn{
+  @apply inline-flex px-[2em] py-[1em] text-white cursor-pointer border-0 no-underline uppercase;
+  &__primary{
+    @apply bg-[#3f637d];
+    &:is(:hover, :focus){
+      @apply bg-[#2b4355]
+    }
+  }
+  &__secondary{
+    @apply bg-[#4c4171];
+    &:is(:hover, :focus){
+      @apply bg-[#2b2541]
+    }
+  }
+  &__accent{
+    @apply bg-[#efca5d];
+    &:is(:hover, :focus){
+      @apply bg-[#d1a215]
+    }
+  }
+}
+
+//Using a trailing &
+
+.my-text{
+  @apply bg-[red] w-fit;
+  .test-footer &{
+    @apply bg-[green]
+  }
+}
