@@ -7,3 +7,7 @@
     color:red;
   }
 }
+
+.cols{
+  @apply flex gap-[30px];
+}
