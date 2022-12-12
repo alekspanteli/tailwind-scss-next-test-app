@@ -2,12 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-.wrapper{
-  .test{
-    color:red;
-  }
-}
 
-.cols{
-  @apply flex gap-[30px];
-}
