@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// Nesting
+// Nesting nav
 
 .primary-navigation {
   @apply p-4;
@@ -14,12 +14,48 @@
   }
 }
 
-.card{
+// Nesting card
+.card {
   @apply p-4 bg-[#efefef] shadow-[0_0_1rem_rgba(0,0,0,0.15)];
-  &-title{
-    @apply text-[1.5rem] uppercase
+  &-title {
+    @apply text-[1.5rem] uppercase relative after:content-[''] after:block after:w-full after:h-[1px] after:bg-[lime];
+    // &::after {
+    //   content: "";
+    //   @apply block w-full h-[1px] bg-[lime];
+    
+    // }
   }
-  .body{
-    @apply text-[1.125rem]
+  .body {
+    @apply text-[1.125rem];
+  }
+  &-link {
+    @apply no-underline;
+    &:hover,
+    &:focus-visible {
+      @apply underline;
+    }
+  }
+}
+
+// Priamry artice styling
+
+
+.primary-article{
+  @apply px-4 py-12;
+  .title{
+    @apply text-[5rem];
+    span{
+      @apply text-[red];
+    }
+  }
+}
+
+.pointing-list{
+  // @apply my-8 mx-0 marker:text-gray-500;
+  li{
+    @apply pl-2;
+    &::marker{
+      content: "👉";
+    }
   }
 }

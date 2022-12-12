@@ -13,6 +13,16 @@ export default function Home() {
         <p className="body">Text goes here</p>
         <a href="" className="card-link">Link</a>
       </article>
+      <article className="primary-article">
+        <h2 className="title">
+          <span>Title</span>
+        </h2>
+        <ul className="pointing-list">
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </article>
     </>
   );
 }
