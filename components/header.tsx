@@ -34,7 +34,7 @@ export default function Header() {
               href={link.path}
               className={clsx(
                 "primary-navigation__link",
-                router.pathname === link.path ? "underline" : ""
+                router.pathname === link.path && "underline"
               )}
             >
               {link.title}
