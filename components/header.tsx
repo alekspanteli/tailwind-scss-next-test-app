@@ -2,6 +2,25 @@ import Link from "next/link";
 import { clsx } from "clsx";
 import { useRouter } from "next/router";
 
+const navLinks = [
+  {
+    title: 'Home',
+    path: '/'
+  },
+  {
+    title: 'About',
+    path: '/about'
+  },
+  {
+    title: 'Nesting',
+    path: '/nesting'
+  },
+  {
+    title: 'Nesting 3 Challange',
+    path: '/nesting-challenge-3'
+  },
+]
+
 export default function Header() {
   const router = useRouter();
   return (
@@ -9,50 +28,19 @@ export default function Header() {
       <h1>Header goes here</h1>
       <nav className="primary-navigation" aria-label="Primary">
         <ul className="primary-navigation__list">
-          <li className="primary-navigation__item">
+          {navLinks.map((link) => (
+            <li className="primary-navigation__item">
             <Link
-              href="/"
+              href={link.path}
               className={clsx(
                 "primary-navigation__link",
-                router.pathname == "/" ? "underline" : ""
+                router.pathname === link.path ? "underline" : ""
               )}
             >
-              Home
+              {link.title}
             </Link>
           </li>
-          <li className="primary-navigation__item">
-            <Link
-              href="/about"
-              className={clsx(
-                "primary-navigation__link",
-                router.pathname == "/about" ? "underline" : ""
-              )}
-            >
-              About
-            </Link>
-          </li>
-          <li className="primary-navigation__item">
-            <Link
-              href="/nesting"
-              className={clsx(
-                "primary-navigation__link",
-                router.pathname == "/nesting" ? "underline" : ""
-              )}
-            >
-              Nesting
-            </Link>
-          </li>
-          <li className="primary-navigation__item">
-            <Link
-              href="/nesting-challenge-3"
-              className={clsx(
-                "primary-navigation__link",
-                router.pathname == "/nesting-challenge-3" ? "underline" : ""
-              )}
-            >
-              Nesting 3 Challange
-            </Link>
-          </li>
+          ))}
         </ul>
       </nav>
     </header>
