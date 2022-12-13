@@ -19,6 +19,10 @@ const navLinks = [
     title: "Nesting 3 Challange",
     path: "/nesting-challenge-3",
   },
+  {
+    title: "Image",
+    path: "/image",
+  },
 ];
 
 export default function Header() {
