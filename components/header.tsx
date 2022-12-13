@@ -21,6 +21,11 @@ export default function Header() {
               Nesting
             </Link>
           </li>
+          <li className="primary-navigation__item">
+            <Link href="/nesting-challenge-3" className="primary-navigation__link">
+              Nesting 3 Challange
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
