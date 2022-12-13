@@ -19,8 +19,9 @@ export default function About() {
       /> */}
       <Image
         src="/images/elva-fairy-800w.jpg"
-        fill
         alt="test"
+        width={200}
+        height={200}
         sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
