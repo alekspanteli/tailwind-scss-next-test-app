@@ -24,8 +24,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -64,9 +64,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -76,7 +76,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 
 // Nesting nav
 
@@ -98,7 +97,7 @@ select {
     // &::after {
     //   content: "";
     //   @apply block w-full h-[1px] bg-[lime];
-    
+
     // }
   }
   .body {
@@ -115,64 +114,80 @@ select {
 
 // Priamry artice styling
 
-
-.primary-article{
+.primary-article {
   @apply px-4 py-12;
-  .title{
+  .title {
     @apply text-[5rem];
-    span{
+    span {
       @apply text-[red];
     }
   }
 }
 
-.pointing-list{
+.pointing-list {
   // @apply my-8 mx-0 marker:text-gray-500;
-  li{
+  li {
     @apply pl-2;
-    &::marker{
+    &::marker {
       content: "👉";
     }
   }
 }
 
-.mylink{
+.mylink {
   text: {
     transform: uppercase;
     decoration: none;
   }
 }
 
-
 //Nesting challenge 1
 
-.btn{
+.btn {
   @apply inline-flex px-[2em] py-[1em] text-white cursor-pointer border-0 no-underline uppercase;
-  &__primary{
+  &__primary {
     @apply bg-[#3f637d];
-    &:is(:hover, :focus){
-      @apply bg-[#2b4355]
+    &:is(:hover, :focus) {
+      @apply bg-[#2b4355];
     }
   }
-  &__secondary{
+  &__secondary {
     @apply bg-[#4c4171];
-    &:is(:hover, :focus){
-      @apply bg-[#2b2541]
+    &:is(:hover, :focus) {
+      @apply bg-[#2b2541];
     }
   }
-  &__accent{
+  &__accent {
     @apply bg-[#efca5d];
-    &:is(:hover, :focus){
-      @apply bg-[#d1a215]
+    &:is(:hover, :focus) {
+      @apply bg-[#d1a215];
     }
   }
 }
 
 //Using a trailing &
 
-.my-text{
+.my-text {
   @apply bg-[red] w-fit;
-  .test-footer &{
-    @apply bg-[green]
+  .test-footer & {
+    @apply bg-[green];
+  }
+}
+
+//Media query nesting
+
+.product-card {
+  @apply p-[0.5em] rounded-[1rem] shadow-[0_0_1rem_rgba(0,0,0,0.2)];
+  &__title {
+    @apply text-[1.5em];
+  }
+  @media (min-width: 45em) {
+    @apply p-[0.75rem];
+  }
+  @media (min-width: 60rem) {
+    @apply p-[1rem] flex;
+    &__title {
+      @apply text-[red];
+    }
   }
 }

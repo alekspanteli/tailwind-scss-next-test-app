@@ -39,6 +39,12 @@ export default function Home() {
         <p className="my-text">text goes here</p>
       </footer>
       <p className="my-text">text goes here</p>
+      <h2>Media queries nesting</h2>
+      <article className="product-card">
+        <h2 className="product-card__title">
+          Title
+        </h2>
+      </article>
     </>
   );
 }
