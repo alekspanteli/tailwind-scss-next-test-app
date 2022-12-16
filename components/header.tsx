@@ -23,6 +23,14 @@ const navLinks = [
     title: "Image",
     path: "/image",
   },
+  {
+    title: "Variables",
+    path: "/variables",
+  },
+  {
+    title: "Variables Cases",
+    path: "/variables-use-cases",
+  },
 ];
 
 export default function Header() {

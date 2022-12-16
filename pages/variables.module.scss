@@ -1,0 +1,31 @@
+// $clr-primary: purple;
+
+// .title {
+//   color: $clr-primary;
+// }
+
+// .link {
+//   color: $clr-primary;
+// }
+
+$clr-dark-gray: #333;
+$clr-light-gray: #efefef;
+
+$clr-primary-bg: $clr-dark-gray;
+$clr-primary-text: $clr-light-gray;
+
+.box {
+  color: $clr-primary-text;
+  background: $clr-primary-bg;
+}
+
+.test-1 {
+  $clr-primary: green !global;
+  &__link {
+    color: $clr-primary;
+  }
+}
+
+.customTitle {
+  color: $clr-primary;
+}
