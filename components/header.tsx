@@ -31,6 +31,10 @@ const navLinks = [
     title: "Variables Cases",
     path: "/variables-use-cases",
   },
+  {
+    title: "Color functions",
+    path: "/color-func",
+  },
 ];
 
 export default function Header() {
