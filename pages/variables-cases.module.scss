@@ -16,7 +16,7 @@
 //           'main sidebar-two'
 //           'footer footer';
 //       }
-    
+
 //       @media (min-width: $bp-large) {
 //         grid-template-areas:
 //           'header header header'
@@ -26,28 +26,33 @@
 //     }
 // }
 
-$clr-dark-gray: #333;
-$clr-light-gray: #efefef;
+$clr-1: #201e1f;
+$clr-2: #da3f0b;
+$clr-3: #f8f7f7;
 
-$clr-primary-bg: $clr-dark-gray;
-$clr-primary-text: $clr-light-gray;
-
-.card{
-    @apply grid gap-[0.75em] w-[min(90%,60rem)] p-[2em] shadow-[0_0_2rem_#201e1f] rounded-lg;
-    &__title{
-        @apply text-[#da3f0b];
-    }
-    
+.card {
+  --clr-primary: #{$clr-1};
+  --clr-secondary: #{$clr-2};
+  --clr-tertiary: #{$clr-3};
+  @apply grid gap-[0.75em] w-[min(90%,60rem)] p-[2em] shadow-[0_0_2rem_#201e1f] rounded-lg;
+  &__title {
+    @apply text-[#da3f0b];
+  }
 }
 
-.btn{
-    @apply inline-flex
-}
-
-.btn--primary{
-    @apply bg-[red]
+.button {
+  @apply inline-flex py-[0.5em] px-[1.5em] border-[1px] border-[#da3f0b] rounded-[0.5rem] 
+  hover:bg-[var(--clr-primary)] hover:text-[var(--clr-tertiary)] focus:bg-[var(--clr-primary)] focus:text-[var(--clr-tertiary)]
+  hover:shadow-[0_0_1rem_var(--clr-secondary)] focus:shadow-[0_0_1rem_var(--clr-secondary)]
+  ;
+  &--primary {
+    @apply text-[#f8f7f7] bg-[var(--clr-secondary)];
+  }
+  &--outline {
+    @apply text-[#da3f0b];
+  }
 }
 
 .flex-group {
-    @apply flex gap-4
-  }
+  @apply flex gap-4;
+}

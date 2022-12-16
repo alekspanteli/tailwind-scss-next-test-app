@@ -20,10 +20,10 @@ export default function VariablesCases() {
           aliquip ex ea commodo consequat.
         </p>
         <div className={styles["flex-group"]}>
-          <a href="#" className={clsx("btn", styles["btn--primary"])}>
+          <a href="#" className={clsx(styles.button, styles["button--primary"])}>
             Buy now
           </a>
-          <a href="#" className={clsx("btn", styles["btn--outline"])}>
+          <a href="#" className={clsx(styles.button, styles["button--outline"])}>
             More info
           </a>
         </div>
