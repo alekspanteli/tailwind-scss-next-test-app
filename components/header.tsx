@@ -32,7 +32,7 @@ const navLinks = [
     path: "/variables-use-cases",
   },
   {
-    title: "Color functions",
+    title: "Color functions 2",
     path: "/color-func",
   },
 ];
